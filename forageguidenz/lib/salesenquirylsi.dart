@@ -316,7 +316,7 @@ class _EnquiryState extends State<EnquiryLSI> {
 
                     Container(
                       margin: EdgeInsets.fromLTRB(100, 30, 100, 0),
-                      child: Text('select farm type:'),
+                      child: Text('Select farm type:'),
                     ),
                     // farm type container
                     Container(
@@ -343,7 +343,6 @@ class _EnquiryState extends State<EnquiryLSI> {
                           });
                         },
                         items: <String>[
-                          '',
                           'Dairy',
                           'Sheep & Beef',
                           'Sheep',
@@ -363,7 +362,13 @@ class _EnquiryState extends State<EnquiryLSI> {
 
                     Container(
                       margin: EdgeInsets.fromLTRB(100, 30, 100, 0),
-                      child: Text('select a preferred retailer:'),
+                      child: Text('Select a preferred retailer:'),
+                    ),
+
+                    Text(
+                      'Scroll down to see all retailers',
+                      style: TextStyle(color: Colors.red, fontSize: 12.0),
+                      textAlign: TextAlign.center,
                     ),
 
                     // preferred retailer container
@@ -391,15 +396,19 @@ class _EnquiryState extends State<EnquiryLSI> {
                           });
                         },
                         items: <String>[
-                          '',
                           'Ravensdown',
+                          'Catalyst Agronomy Services',
                           'Farmlands',
-                          'PGG Wrightson',
-                          'Wholesale Seeds',
-                          'New Zealand Farm Source',
-                          'North Otago Pastoral Services',
+                          'Farm Source',
+                          'PGGW Rural',
+                          'Ruralco',
+                          'Luisetti Seeds',
+                          'Carrfields',
                           'Advance Agriculture',
                           'Kubala Seeds',
+                          'North Otago Pastoral',
+                          'RB Rural',
+                          'H&T Agronomics',
 
                         ].map<DropdownMenuItem<String>>((String value) {
                           return DropdownMenuItem<String>(
@@ -407,12 +416,13 @@ class _EnquiryState extends State<EnquiryLSI> {
                             child: Text(value),
                           );
                         }).toList(),
+
                       ),
                     ),
 
                     Container(
                       margin: EdgeInsets.fromLTRB(50, 20, 50, 0),
-                      child: Text('select products, then click proceed:'),
+                      child: Text('Select products, then click proceed:'),
                     ),
 
                     Container(
@@ -424,7 +434,7 @@ class _EnquiryState extends State<EnquiryLSI> {
 
                           MultiSelectDialogField(
                             items: _cultivars,
-                            title: Text("Scroll down to see and select products"),
+                            title: Text("scroll down to see and select products"),
                             backgroundColor: Colors.lightGreen,
                             selectedColor: Colors.black,
                             decoration: BoxDecoration(

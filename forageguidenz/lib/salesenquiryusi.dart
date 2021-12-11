@@ -316,8 +316,9 @@ class _EnquiryState extends State<EnquiryUSI> {
 
                     Container(
                       margin: EdgeInsets.fromLTRB(100, 30, 100, 0),
-                      child: Text('select farm type:'),
+                      child: Text('Select farm type:'),
                     ),
+
                     // farm type container
                     Container(
                       height: 50,
@@ -330,6 +331,7 @@ class _EnquiryState extends State<EnquiryUSI> {
                             style: BorderStyle.solid,
                             width: 1.80),
                       ),
+
                       child: DropdownButton<String>(
                         dropdownColor: Colors.lightGreen,
                         value: farmtype,
@@ -343,7 +345,6 @@ class _EnquiryState extends State<EnquiryUSI> {
                           });
                         },
                         items: <String>[
-                          '',
                           'Dairy',
                           'Sheep & Beef',
                           'Sheep',
@@ -361,9 +362,15 @@ class _EnquiryState extends State<EnquiryUSI> {
                       ),
                     ),
 
+
                     Container(
                       margin: EdgeInsets.fromLTRB(100, 30, 100, 0),
-                      child: Text('select a preferred retailer:'),
+                      child: Text('Select a preferred retailer:'),
+                    ),
+                    Text(
+                      'Scroll down to see all retailers',
+                      style: TextStyle(color: Colors.red, fontSize: 12.0),
+                      textAlign: TextAlign.center,
                     ),
 
                     // preferred retailer container
@@ -378,6 +385,8 @@ class _EnquiryState extends State<EnquiryUSI> {
                             style: BorderStyle.solid,
                             width: 1.80),
                       ),
+
+
                       child: DropdownButton<String>(
                         dropdownColor: Colors.lightGreen,
                         value: retailer,
@@ -391,21 +400,21 @@ class _EnquiryState extends State<EnquiryUSI> {
                           });
                         },
                         items: <String>[
-                          '',
                           'Ravensdown',
+                          'Catalyst Agronomy Services',
                           'Farmlands',
-                          'PGG Wrightson',
-                          'Wholesale Seeds',
-                          'New Zealand Farm Source',
+                          'Farm Source',
+                          'PGGW Rural',
                           'Ruralco',
-                          'North Otago Pastoral Services',
-                          'Cates Grain & Seed',
                           'Luisetti Seeds',
-                          'Stapletons',
-                          'Carrfields',
-                          'Turnbull Grain & Seed',
-                          'Hazlett Rural',
                           'Specialty Seeds',
+                          'Cates Grain & Seed',
+                          'Hazlett Rural',
+                          'Carrfields',
+                          'Frame Grain and Seed',
+                          'Kiwi Seeds',
+                          'H&T Agronomics',
+                          'Turnbull Grain & Seed',
 
                         ].map<DropdownMenuItem<String>>((String value) {
                           return DropdownMenuItem<String>(
@@ -418,7 +427,7 @@ class _EnquiryState extends State<EnquiryUSI> {
 
                     Container(
                       margin: EdgeInsets.fromLTRB(50, 20, 50, 0),
-                      child: Text('select products, then click proceed:'),
+                      child: Text('Select products, then click proceed:'),
                     ),
 
                     Container(

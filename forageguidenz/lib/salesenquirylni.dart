@@ -316,7 +316,7 @@ class _EnquiryState extends State<EnquiryLNI> {
 
                     Container(
                       margin: EdgeInsets.fromLTRB(100, 30, 100, 0),
-                      child: Text('select farm type:'),
+                      child: Text('Select farm type:'),
                     ),
                     // farm type container
                     Container(
@@ -343,7 +343,6 @@ class _EnquiryState extends State<EnquiryLNI> {
                           });
                         },
                         items: <String>[
-                          '',
                           'Dairy',
                           'Sheep & Beef',
                           'Sheep',
@@ -363,8 +362,9 @@ class _EnquiryState extends State<EnquiryLNI> {
 
                     Container(
                       margin: EdgeInsets.fromLTRB(100, 30, 100, 0),
-                      child: Text('select a preferred retailer:'),
+                      child: Text('Select a preferred retailer:'),
                     ),
+
 
                     // preferred retailer container
                     Container(
@@ -381,6 +381,7 @@ class _EnquiryState extends State<EnquiryLNI> {
                       child: DropdownButton<String>(
                         dropdownColor: Colors.lightGreen,
                         value: retailer,
+
                         icon: const Icon(Icons.arrow_downward),
                         iconSize: 24,
                         elevation: 16,
@@ -390,17 +391,17 @@ class _EnquiryState extends State<EnquiryLNI> {
                             retailer = newValue;
                           });
                         },
+
                         items: <String>[
-                          '',
                           'Ravensdown',
                           'Farmlands',
-                          'PGG Wrightson',
-                          'New Zealand Farm Source',
-                          'H&T Agronomics',
-                          'Seeds and Cereals Ltd',
-                          'Smart Forage and Pasture Solutions',
-                          'Ruapehu Farm Supplies',
-                          'Tod Seeds',
+                          'Farm Source',
+                          'PGGW Rural',
+                          'Hodder & Taylors Ltd',
+                          'Hazlett Rural Ltd (North Island)',
+                          'Tod Seeds Ltd',
+                          'Ruapehu Farm Supplies Ltd',
+                          'Agri Plus Ltd',
 
                         ].map<DropdownMenuItem<String>>((String value) {
                           return DropdownMenuItem<String>(
@@ -408,12 +409,13 @@ class _EnquiryState extends State<EnquiryLNI> {
                             child: Text(value),
                           );
                         }).toList(),
+
                       ),
                     ),
 
                     Container(
                       margin: EdgeInsets.fromLTRB(50, 20, 50, 0),
-                      child: Text('select products, then click proceed:'),
+                      child: Text('Select products, then click proceed:'),
                     ),
 
                     Container(
